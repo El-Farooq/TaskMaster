@@ -40,7 +40,7 @@ A web browser (e.g., Chrome, Firefox)
 # Steps
 
 # Clone the repository:
-git clone https://github.com/your-username/TaskMaster.git
+git clone https://github.com/El-Farooq/TaskMaster.git
 
 # Navigate to the project directory:
 cd TaskMaster
