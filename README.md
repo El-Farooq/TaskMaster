@@ -1,106 +1,131 @@
-# TaskMaster - Task Management System
-TaskMaster is a full-stack web application designed to help users efficiently manage their daily tasks. With features like user registration, task creation, updates, filtering, and search capabilities, TaskMaster provides an intuitive and user-friendly interface for personal and professional task management.
+# TaskMaster - Full Stack Task Management System
+# Overview
+The Cloud-Based Task Manager is a web application designed to streamline team task management. Built using the MERN stack (MongoDB, Express.js, React, and Node.js), this platform provides a user-friendly interface for efficient task assignment, tracking, and collaboration. The application caters to administrators and regular users, offering comprehensive features to enhance productivity and organization.
 
-# Project Overview
-TaskMaster is built to demonstrate practical full-stack development skills by integrating backend technologies (Node.js, Express.js, MongoDB) with frontend technologies (HTML, CSS, JavaScript). The application is designed to be scalable, secure, and optimized for performance.
+# Why/Problem?
+In a dynamic work environment, effective task management is crucial for team success. Traditional methods of task tracking through spreadsheets or manual systems can be cumbersome and prone to errors. The Cloud-Based Task Manager aims to address these challenges by providing a centralized platform for task management, enabling seamless collaboration and improved workflow efficiency.
 
-# Features
-User Registration and Authentication
-Secure registration and login with password hashing using bcrypt.
-Authentication using JSON Web Tokens (JWT).
+# Background:
+With the rise of remote work and dispersed teams, there is a growing need for tools that facilitate effective communication and task coordination. The Cloud-Based Task Manager addresses this need by leveraging modern web technologies to create an intuitive and responsive task management solution. The MERN stack ensures scalability, while the integration of Redux Toolkit, Headless UI, and Tailwind CSS enhances user experience and performance.
 
-# Task Management
-Create tasks with attributes such as title, description, deadline, and priority.
-Update and delete tasks seamlessly.
+# Admin Features:
 
-# Task Filtering
-Filter tasks by priority (low, medium, high) or due date.
+# 1. User Management:
+  Create admin accounts.
+  Add and manage team members.
 
-# Search Functionality
-Search tasks by keywords in the title or description.
+# 2. Task Assignment:
+  Assign tasks to individual or multiple users.
+  Update task details and status.
 
-# Responsive Design
-Fully responsive user interface optimized for desktops, tablets, and mobile devices.
+# 3. Task Properties:
+  Label tasks as todo, in progress, or completed.
+  Assign priority levels (high, medium, normal, low).
+  Add and manage sub-tasks.
 
-# Error Handling
-Proper error messages for form validation and server-side issues.
+# 4. Asset Management:
+  Upload task assets, such as images.
 
-# Tech Stack
-Frontend: HTML, CSS, JavaScript
-Backend: Node.js, Express.js
-Database: MongoDB
-Authentication: JSON Web Tokens (JWT), bcrypt
+# 5. User Account Control:
+  Disable or activate user accounts.
+  Permanently delete or trash tasks.
 
-# Installation
-Prerequisites:
-Node.js (v16.x or higher)
-MongoDB (Ensure a running MongoDB instance)
-A web browser (e.g., Chrome, Firefox)
+# User Features:
 
-# Steps
+# 1. Task Interaction:
+  Change task status (in progress or completed).
+  View detailed task information.
 
-# Clone the repository:
-git clone https://github.com/El-Farooq/TaskMaster.git
+# 2. Communication:
+  Add comments or chat to task activities.
 
-# Navigate to the project directory:
-cd TaskMaster
+# General Features:
 
-# Install dependencies:
-npm install
+#  1. Authentication and Authorization:
+  User login with secure authentication.
+  Role-based access control.
 
-# Create a .env file in the project root and add the following environment variables:
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
+# 2. Profile Management:
+  Update user profiles.
 
-# Start the server:
-npm start
+# 3. Password Management:
+  Change passwords securely.
 
-# Open your browser and navigate to:
-http://localhost:5000
+# 4. Dashboard:
+  Provide a summary of user activities.
+  Filter tasks into todo, in progress, or completed.
 
-# Usage
-Signup: Create a new account using the signup page.
-Login: Log in with your registered email and password.
-Manage Tasks:
-Create tasks by entering a title, description, deadline, and priority.
-Update tasks when necessary.
-Delete tasks you no longer need.
-Filter and Search:
-Use the filter dropdown to sort tasks by priority or deadline.
-Use the search bar to find tasks based on keywords.
+# Technologies Used:
 
-# Project Structure
-TaskMaster/
-├── public/           # Static files (HTML, CSS, JS)
-├── views/            # Frontend templates
-├── routes/           # API routes
-├── models/           # Mongoose schemas
-├── controllers/      # Application logic
-├── config/           # Configuration files
-├── .env              # Environment variables
-├── server.js         # Entry point of the app
-└── README.md         # Documentation
+# 1. Frontend:
+  React (Vite)
+  Redux Toolkit for State Management
+  Headless UI
+  Tailwind CSS
 
-# Future Improvements
-Add email notifications for task deadlines.
-Implement dark mode for the user interface.
-Enhance task prioritization with drag-and-drop features.
-Integrate social logins (e.g., Google, Facebook).
+# 2. Backend:
+  Node.js with Express.js
 
-# Contributing
-Contributions are welcome! If you'd like to contribute, follow these steps:
-Fork the repository.
+# 3. Database:
+  MongoDB for efficient and scalable data storage.
+The Cloud-Based Task Manager is an innovative solution that brings efficiency and organization to task management within teams. By harnessing the power of the MERN stack and modern frontend technologies, the platform provides a seamless experience for both administrators and users, fostering collaboration and productivity.
 
-Create a feature branch:
-git checkout -b feature-name
+ 
 
-Commit your changes:
-git commit -m "Add feature name"
+# SETUP INSTRUCTIONS
 
-Push to the branch:
-git push origin feature-name
-Open a pull request.
+# Server Setup
+
+# Environment variables
+
+First, create the environment variables file .env in the server folder. The .env file contains the following environment variables:
+  MONGODB_URI = your MongoDB URL
+  JWT_SECRET = any secret key - must be secured
+  PORT = 8800 or any port number
+  NODE_ENV = development
+ 
+
+# Set Up MongoDB:
+
+1. Setting up MongoDB involves a few steps:
+  Visit MongoDB Atlas Website
+    Go to the MongoDB Atlas website: https://www.mongodb.com/cloud/atlas.
+  Create an Account
+  Log in to your MongoDB Atlas account.
+  Create a New Cluster
+  Choose a Cloud Provider and Region
+  Configure Cluster Settings
+  Create Cluster
+  Wait for Cluster to Deploy
+  Create Database User
+  Set Up IP Whitelist
+  Connect to Cluster
+  Configure Your Application
+  Test the Connection
+
+2. Create a new database and configure the .env file with the MongoDB connection URL.
+
+# Steps to run server
+  Open the project in any editor of choice.
+  Navigate into the server directory cd server.
+  Run npm i or npm install to install the packages.
+  Run npm start to start the server.
+
+If configured correctly, you should see a message indicating that the server is running successfully and Database Connected.
+
+
+# Client Side Setup
+
+# Environment variables
+First, create the environment variables file .env in the client folder. The .env file contains the following environment variables:
+  VITE_APP_BASE_URL = http://localhost:8800 #Note: Change the port 8800 to your port number.
+  VITE_APP_FIREBASE_API_KEY = Firebase api key
+
+# Steps to run client
+  1. Navigate into the client directory cd client.
+  2. Run npm i or npm install to install the packages.
+  3. Run npm start to run the app on http://localhost:3000.
+  4. Open http://localhost:3000 to view it in your browser.
 
 # License
 This project is licensed under the MIT License.
